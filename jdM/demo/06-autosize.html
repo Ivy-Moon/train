@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div:first-child{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            opacity: 0.5;
+            float: left;
+        }
+        div:last-child{
+            background-color:green;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div>//1.获取需要进行滑动的盒子
+        var parentBox=document.querySelector(".jd_category_left");
+        var ulBox=parentBox.querySelector("ul");
+        //获取高度
+        var ulHeight=ulBox.offsetHeight; //需要进行滑动的盒子高度
+        var parentHeight=parentBox.offsetHeight//在父容器的高度
+        //2.设置最大的滑动区间，这个区间是指Y的坐标值，也就是意味着顶部的top属性值
+        var maxPosition=0; //最大top值
+        var minPosition=parentHeight-ulHeight; //最小top值
+        //3.设置弹簧效果区间
+        var bounce=100; //可拉伸的弹簧区间值
+        var maxBounce=maxPosition+bounce;
+        var minBounce=minPosition-bounce;
+
+        //添加公共方法
+        //添加过渡
+        var addTransition=function(){
+        ulBox.style.webkitTransition="all .2s";
+        ulBox.style.transition="all .2s";
+        }
+        //删除过渡
+        var removeTransition=function(){
+        ulBox.style.webkitTransition="none";
+        ulBox.style.transition="none";
+        }
+        //设置定位
+        var setTransform=function(distance){
+        ulBox.style.webkitTransform="translateY("+distance+"px)";
+        ulBox.style.transform="translateY("+distance+"px)";
+        }
+
+        //4.添加滑动事件
+        var startY=0;
+        var moveY=0;
+        var distanceY=0;
+        var isMove=false;
+        //设置变量，记录当前的实际位置
+        var currentY=0;
+        ulBox.addEventListener('touchstart',function(e){
+        startY= e.touches[0].clientY;</div>
+
+
+</body>
+</html>

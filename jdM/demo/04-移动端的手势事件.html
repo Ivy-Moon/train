@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        a{
+            width: 100%;
+            height: 200px;
+            border: 5px solid red;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">aa</a></li>
+        <li><a href="#">bb</a></li>
+        <li><a href="#">cc</a></li>
+    </ul>
+    <script>
+        var div=document.querySelector("ul");
+        //添加手势触摸事件:一次触摸只能触发一次
+        //在移动端：一个手指就会产生一个touch对象
+        div.addEventListener("touchstart",function(e){
+            console.log("touchstart");
+            console.log(e.target.parentNode);
+        });
+        //手势滑动事件：说明只有手指有滑动就会触发--循环触发
+        div.addEventListener("touchmove",function(e){
+            /*console.log("touchmove");
+            console.log(e);*/
+        });
+        //手势触摸结束--离开屏幕
+        div.addEventListener("touchend",function(e){
+            /*console.log("touchend");
+            console.log(e);*/
+        });
+    </script>
+</body>
+</html>

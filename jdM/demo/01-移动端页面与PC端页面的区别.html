@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--name="viewport"：名称，只有拥有这个名称，在移动端才能正常的解析  Viewport只有在移动端才能解析
+    content:你需要进行设置的参数列表
+    width=device-width:设置宽度为当前设备的宽度
+    user-scalable=0:设置页面是否可以缩放
+    initial-scale=1.0:默认缩放比，如果没有特别需要，则是1.0
+    maximum-scale:设置最大缩放比
+    minimum-scale:最小缩放比
+    -->
+   <!-- <meta name="viewport" content="width=device-width,user-scalable=0，initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            /*pc如果需要自适应屏幕的宽度：这种宽度%比的设置就是称流式布局*/
+            width: 100%;
+            height: 500px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        f)	样式：
+        /*头部样式*/
+        .jd_header{
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        z-index: 999;
+        max-width: 640px; /*最大宽度*/
+        min-width: 320px; /*最小宽度*/
+        margin: 0px auto;
+        }
+        .jd_header > .jd_logo{
+        width:60px;
+        height:36px;
+        position: absolute;
+        background: url("../images/sprites.png") no-repeat;
+        background-size: 200px 200px; /*比例缩放*/
+        background-position: 0px -103px;
+        }
+        .jd_header > .login{
+        width: 50px;
+        height: 36px;
+        line-height:36px;
+        text-align: center;
+        color: white;
+        position: absolute;
+        right: 0;
+        top:0;
+        }
+        .jd_header > form{
+        width: 100%;
+        padding-left:75px;
+        padding-right:50px;
+        height:36px;
+        }
+        .jd_header > form >input {
+        width: 100%;
+        height:30px;
+        border-radius: 15px;
+        margin-top:3px;
+        padding-left:25px;
+
+        f)	样式：
+        /*头部样式*/
+        .jd_header{
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        z-index: 999;
+        max-width: 640px; /*最大宽度*/
+        min-width: 320px; /*最小宽度*/
+        margin: 0px auto;
+        }
+        .jd_header > .jd_logo{
+        width:60px;
+        height:36px;
+        position: absolute;
+        background: url("../images/sprites.png") no-repeat;
+        background-size: 200px 200px; /*比例缩放*/
+        background-position: 0px -103px;
+        }
+        .jd_header > .login{
+        width: 50px;
+        height: 36px;
+        line-height:36px;
+        text-align: center;
+        color: white;
+        position: absolute;
+        right: 0;
+        top:0;
+        }
+        .jd_header > form{
+        width: 100%;
+        padding-left:75px;
+        padding-right:50px;
+        height:36px;
+        }
+        .jd_header > form >input {
+        width: 100%;
+        height:30px;
+        border-radius: 15px;
+        margin-top:3px;
+        padding-left:25px;
+
+    </div>
+</body>
+</html>
