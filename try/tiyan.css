@@ -1,0 +1,63 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+.header{
+	background-color: #111;
+	min-width: 320px;
+}
+
+.header .logo a{
+	display: block;
+	margin: 0 auto;
+	height: 50px;
+	width: 135px;
+	background: url("images/logo2 (1).png") no-repeat center center;
+}
+
+.header .nav ul li{
+	float: left;
+	margin-left: 24px;
+}
+.header .nav ul li a{
+	color: #fff;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	text-decoration: none;
+}
+.header .search{
+	margin-top: 10px;
+}
+
+.header .search form .font span{
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+.header .search form input{
+	width: 100%;
+	height: 100%;
+	background-color: #2f2f2f;
+	color: #fff;
+	border: none;
+}
+
+.header .login{
+	margin-top: 10px;
+}
+
+.header .login div a{
+	color: #fff;
+	text-decoration: none;
+}
+.header .login div .try{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #03aeba;
+	text-align: center;
+}
