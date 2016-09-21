@@ -1,0 +1,99 @@
+/*全屏界面*/
+html,body{
+    width:100%;
+    height:100%;
+}
+
+.jd_layout{
+    width:100%;
+    height:100%;
+}
+.jd_header{
+    width:100%;
+    height: 45px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+/*提取公共样式*/
+.jd_header [class^="jd_icon_"]{
+    width: 40px;
+    height: 44px;
+    display: block;
+    background: url("../images/sprites.png") no-repeat;
+    /*需要来修改当前图片的显示大小*/
+    background-size: 200px 200px;
+    padding:10px;
+    /*它用来设置背景图片填充时的默认的坐标参照：默认参照左上角*/
+    background-origin: content-box;
+    /*设置当前不需要显示的区域，裁切，将属性之外的区域内容裁切掉*/
+    background-clip: content-box;
+    position: absolute;
+    top: 0;
+}
+.jd_header > .jd_icon_back{
+    background-position: -20px 0;
+    left: 0;
+}
+.jd_header > .jd_icon_menu{
+    background-position: -60px 0;
+    right: 0;
+}
+.jd_header > h3{
+    width:100%;
+    text-align: center;
+    line-height:44px;
+    position: absolute;
+}
+/*安全提示*/
+.jd_safeTip{
+     width:100%;
+     height:32px;
+     text-align: center;
+ }
+/*.jd_safeTip > img{
+    width:20px;
+    height: 20px;
+    vertical-align: middle;
+}*/
+.jd_safeTip > p {
+    line-height:32px;
+    text-align: center;
+    color: #666;
+    position: relative;
+    padding-left:25px;
+    display: inline-block;
+}
+.jd_safeTip > p::before {
+    content: "";
+    position: absolute;
+    width:18px;
+    height: 18px;
+    background: url("../images/safe_icon.png");
+    background-size: 18px 18px;
+    left: 0;
+    top:7px;
+}
+.jd_product{
+    width:100%;
+    margin-top:10px;
+    border: 1px solid #ccc;
+    min-height: 300px;
+}
+.jd_product > .jd_product_tip{
+    width:100%;
+    height: 32px;
+    font-size: 12px;
+}
+.jd_checkBox {
+    width: 20px;
+    height: 20px;
+    background: url("../images/shop-icon.png") no-repeat;
+    background-size: 50px 100px;
+    display: block;
+    float: left;
+}
+.jd_tip_right{
+    overflow: hidden;
+    background-color: red;
+    height: 32px;
+}
